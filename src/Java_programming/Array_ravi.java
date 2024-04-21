@@ -39,7 +39,9 @@ public class Array_ravi
 		System.out.println("Third max : "+arr[arr.length-3]+"\nThird min: "+ arr[2]);
 
 	}
-	
+	{
+		System.out.println("Git is started");
+	}
 	// WAP to check and print all the pairs of element having sum 10
 	public static void sum_10(int []arr)
 	{
