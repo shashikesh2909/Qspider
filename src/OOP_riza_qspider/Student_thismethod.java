@@ -11,6 +11,45 @@ public class Student_thismethod
 	long phone_num ;
 	double perc;
 	
+	public static void main(String[] args) 
+	{
+		Scanner sc = new Scanner (System.in);
+		System.out.println("Enter student ID: ");
+		int sid = sc.nextInt();
+		
+		sc.nextLine();
+		System.out.println("Enter student Name: ");
+		String sname = sc.nextLine();
+		
+		System.out.println("Enter student Age: ");
+		int age = sc.nextInt();
+		
+		System.out.println("Enter student gender: ");
+		char gender = sc.next().charAt(0);
+		
+		System.out.println("Enter student Phone number: ");
+		long phone_num = sc.nextLong();
+		
+		System.out.println("Enter student percentage: ");
+		double perc = sc.nextDouble();
+		
+		Student_thismethod s1 = new Student_thismethod();
+		Student_thismethod s2 = new Student_thismethod(sid,sname);
+		Student_thismethod s3 = new Student_thismethod(sid,sname,age);
+		Student_thismethod s4 = new Student_thismethod(sid,sname,age,gender);
+		Student_thismethod s5 = new Student_thismethod(sid,sname,age,gender,phone_num);
+		Student_thismethod s6 = new Student_thismethod(sid,sname,age,gender,phone_num,perc);
+
+		s1.print();
+		s2.print();
+		s3.print();
+		s4.print();
+		s5.print();
+		s6.print();
+		
+		sc.close();
+	}
+	
 	public void print()
 	{
 		System.out.println(this.sid+"\t"+this.sname+"\t"+this.age+"\t"+this.gender+"\t"+this.phone_num+"\t"+this.perc);
@@ -100,47 +139,6 @@ public class Student_thismethod
 		{
 			this.perc = perc;
 		}
-	}
-
-	public static void main(String[] args) 
-	{
-		Scanner sc = new Scanner (System.in);
-		System.out.println("Enter student ID: ");
-		int sid = sc.nextInt();
-		
-		sc.nextLine();
-		System.out.println("Enter student Name: ");
-		String sname = sc.nextLine();
-		
-		System.out.println("Enter student Age: ");
-		int age = sc.nextInt();
-		
-		System.out.println("Enter student gender: ");
-		char gender = sc.next().charAt(0);
-		
-		System.out.println("Enter student Phone number: ");
-		long phone_num = sc.nextLong();
-		
-		System.out.println("Enter student percentage: ");
-		double perc = sc.nextDouble();
-		
-		Student_thismethod s1 = new Student_thismethod();
-		Student_thismethod s2 = new Student_thismethod(sid,sname);
-		Student_thismethod s3 = new Student_thismethod(sid,sname,age);
-		Student_thismethod s4 = new Student_thismethod(sid,sname,age,gender);
-		Student_thismethod s5 = new Student_thismethod(sid,sname,age,gender,phone_num);
-		Student_thismethod s6 = new Student_thismethod(sid,sname,age,gender,phone_num,perc);
-
-		s1.print();
-		s2.print();
-		s3.print();
-		s4.print();
-		s5.print();
-		s6.print();
-		
-		
-		sc.close();
-		
 	}
 
 }
