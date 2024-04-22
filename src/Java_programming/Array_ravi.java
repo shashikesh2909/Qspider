@@ -12,22 +12,81 @@ public class Array_ravi
 		int size = sc.nextInt();
 
 		int [] arr1 = new int [size];
-		int [] arr2 = new int [size];
-
+		
 		for(int i=0;i<size;i++)
 		{
-			System.out.println("Enter the array "+i+" index value : ");
+			System.out.println("Enter the array at "+i+" index value : ");
 			arr1[i] = sc.nextInt();
 		}
-//		System.out.println("Enter the element of array");
+ 
+//		int [] arr2 = new int [size];
+//		System.out.println("Enter the element of 2nd array");
 //		for(int i=0;i<size;i++)
 //		{
 //			System.out.println("Enter the array "+i+" index value : ");
 //			arr2[i] = sc.nextInt();
 //		}
-		secMaxMin(arr1);
+		
+//		System.out.println("enter the element which needs to be searched");
+//		int n = sc.nextInt();
+		
+		sum_10(arr1);
 		
 		sc.close();
+	}
+	
+	// wap to check which all elements are common between two arrays
+	public static void common(int [] arr1 , int [] arr2)
+	{
+		System.out.println("The common elements between two array are : ");
+		for (int i=0;i<arr1.length;i++)
+		{
+			for (int j=0;j<arr2.length;j++)
+			{
+				if (arr1[i]==arr2[j])
+				{
+					System.out.print(arr1[i]+" ");
+				}
+			}
+		}
+	}
+	
+	// wap to check the number of occurence in an array for a number 
+	public static void occurence(int [] arr, int n)
+	{
+		int count = 0 ;
+		int i =0 ;
+		for (i = 0;i<arr.length;i++)
+		{
+			if (n==arr[i])
+			{	
+				count++;
+			}
+		}
+		System.out.println("Numbmer of occurence for "+n + " is : " + count);
+	}
+	
+	// wap to search an element in an array 
+	public static void search(int [] arr, int n)
+	{
+		boolean b = false ;
+		int i =0 ;
+		for (i = 0;i<arr.length;i++)
+		{
+			if (n==arr[i])
+			{	
+				b = true;
+				break;
+			}
+		}
+		if (b==true)
+		{
+			System.out.println("this is present at index :" + i);
+		}
+		else
+		{
+			System.out.println("this is not present");
+		}
 	}
 	
 	// WAP to print second max and second min element in an array 
@@ -39,9 +98,7 @@ public class Array_ravi
 		System.out.println("Third max : "+arr[arr.length-3]+"\nThird min: "+ arr[2]);
 
 	}
-	{
-		System.out.println("Git is started");
-	}
+
 	// WAP to check and print all the pairs of element having sum 10
 	public static void sum_10(int []arr)
 	{
