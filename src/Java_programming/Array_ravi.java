@@ -15,24 +15,175 @@ public class Array_ravi
 		
 		for(int i=0;i<size;i++)
 		{
-			System.out.println("Enter the array at "+i+" index value : ");
+			System.out.println("Enter the value at "+i+" index  : ");
 			arr1[i] = sc.nextInt();
 		}
- 
-//		int [] arr2 = new int [size];
+		
+//		System.out.println("---------------");	
+//		
+//		System.out.println("Enter the size of second array");
+//		int size2 = sc.nextInt();
+//		int [] arr2 = new int [size2];
 //		System.out.println("Enter the element of 2nd array");
-//		for(int i=0;i<size;i++)
+//		for(int i=0;i<size2;i++)
 //		{
-//			System.out.println("Enter the array "+i+" index value : ");
+//			System.out.println("Enter the value at "+i+" index : ");
 //			arr2[i] = sc.nextInt();
 //		}
 		
 //		System.out.println("enter the element which needs to be searched");
 //		int n = sc.nextInt();
-		
-		sum_10(arr1);
-		
+				
+		missing(arr1);
 		sc.close();
+	}
+	
+	//WAP to display missing element in a given sorted array in a range
+	public static void missing(int [] arr)
+	{
+		Arrays.sort(arr);
+		int n = arr[0];
+		System.out.println(Arrays.toString(arr));
+		for (int i=0;i<arr.length;i++)
+		{
+			if (arr[i]!=n)
+			{
+				System.out.println(n++);
+				break;
+			}
+			n++;
+		}
+	}
+	
+	// WAP to find highest contiguous sum of the two elements in given array
+	public static void highest_sum(int [] arr)
+	{
+		int sum = 0,high=0;
+		for (int i=0;i<arr.length;i++)
+		{
+			for(int j=0;j<arr.length;j++)
+			{
+				if (i!=j)
+				{
+					sum = arr[i]+arr[j];
+					if(sum > high)
+					{
+						high = sum ;
+					}
+				}
+			}
+		}
+		System.out.println("Highest contiguous sum is : " + high);
+		
+	}
+	
+	// WAP to display the common elements between two arrays
+	public static void common_element(int [] arr1 , int [] arr2)
+	{
+		for (int i=0;i<arr1.length;i++)
+		{
+			for(int j=0;j<arr2.length;j++)
+			{
+				if(arr1[i] == arr2[j])
+				{
+					System.out.println(arr1[i]);
+				}
+			}
+		}
+	}
+	
+	// WAP to exchange of first part element to second part element between two arrays
+	public static void swap_part(int [] arr1 , int [] arr2)
+	{
+		int temp [] = new int [arr1.length+arr2.length];
+		for (int i=0;i<arr1.length/2;i++)
+		{
+			temp[i] = arr1[i];
+			arr1[i] = arr2[i+arr2.length/2];
+			arr2[arr2.length/2+i]=temp[i];			
+		}
+		System.out.println(Arrays.toString(arr1));
+		System.out.println(Arrays.toString(arr2));
+	}
+	
+	// wap to display distinct elements from given two arrays
+	public static void distinct_display(int [] arr1 , int [] arr2)
+	{
+		int [] merge = new int[arr1.length+arr2.length];
+		int s=0;
+		
+		for (int i=0;i<merge.length;i++)
+		{
+			if (i<arr1.length)
+			{
+				merge[i]=arr1[i];
+			}
+			else
+			{
+				merge[i]=arr2[s];
+				s++ ;
+			}
+		}
+		System.out.println(Arrays.toString(merge));
+		int count=0 ;
+		for (int i=0;i<merge.length;i++)
+		{
+			for (int j=0;j<merge.length;j++)
+			{
+				if(merge[i]==merge[j])
+				{
+					count++;
+				}
+			}
+			if(count==1)
+			{
+				System.out.println(merge[i]);
+			}
+			count = 0;
+		}
+	
+	}
+	
+	// wap to merge two arrays 
+	public static void merge(int [] arr1 , int [] arr2)
+	{
+		int [] zigzag = new int [arr1.length + arr2.length] ;
+		int s = 0 ;	
+		for (int i=0;i<zigzag.length;i++)
+		{
+			if(i< arr1.length)	
+			{
+			zigzag[i] = arr1[i];
+			}
+			else 
+			{
+				zigzag[i] = arr2[s];
+				s++ ;
+			}
+		}
+		System.out.println(Arrays.toString(zigzag));
+	}
+	
+	// WAP to combine two arrays in zigzag manner
+	public static void zigzag(int [] arr1 , int [] arr2)
+	{
+		int [] zigzag = new int [arr1.length + arr2.length] ;
+		
+		int e=0 , o=0;
+		for (int i=0;i<zigzag.length;i++)
+		{
+			if (i%2==0)
+			{
+				zigzag[i] = arr1[e];
+				e++ ;
+			}
+			else
+			{
+				zigzag[i] = arr2[o];
+				o++ ;
+			}
+		}
+		System.out.println(Arrays.toString(zigzag));
 	}
 	
 	// wap to check which all elements are common between two arrays
