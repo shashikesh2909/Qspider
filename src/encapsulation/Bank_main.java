@@ -8,6 +8,6 @@ public class Bank_main
 	public static void main(String[] args) 
 	{		
 		Bank cx1 = new Bank("shashikesh2909","enter","Shashi",3698521444L ,21000,9898);
-		cx1.login();	
+		cx1.login();
 	}
 }

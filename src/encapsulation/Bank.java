@@ -38,6 +38,7 @@ public class Bank
 			login();
 		}
 	}
+	
 	public void operation()
 	{
 		System.out.println("************************************************************************");
@@ -249,7 +250,7 @@ public class Bank
 			System.out.println("Wrong pin entered! ");
 			System.out.println("Please eneter the correct pin");
 			int npin = sc.nextInt();
-			getbalance(pin);
+			getbalance(npin);
 			return this.balance ;
 		}
 	}
