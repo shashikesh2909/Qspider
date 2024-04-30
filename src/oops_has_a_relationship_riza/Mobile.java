@@ -28,7 +28,6 @@ public class Mobile
 		else
 		{
 			System.out.println("Sim1 is already inserted");
-
 		}
 	}
 	
@@ -42,7 +41,6 @@ public class Mobile
 		else
 		{
 			System.out.println("There is no sim in slot1 to remove");
-
 		}
 	}
 	
@@ -56,7 +54,6 @@ public class Mobile
 		else
 		{
 			System.out.println("Sim2 is already inserted");
-
 		}
 	}
 	
@@ -70,7 +67,6 @@ public class Mobile
 		else
 		{
 			System.out.println("There is no sim in slot1 to remove");
-
 		}
 	}
 	
@@ -99,9 +95,5 @@ public class Mobile
 		{
 			System.out.println("sim2 does not exist");
 		}
-
 	}
-	
-		
-	
 }
