@@ -22,6 +22,7 @@ public class BeverageMaker {
 		System.out.println(g1.color);
 		g1.makeJuice();
 		g1.makeWine();	
+		
 	}
 
 }

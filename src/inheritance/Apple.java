@@ -13,6 +13,5 @@ public class Apple extends Fruit
 	{
 		super(price,weight);
 		this.type = type ;	
-	}
-	
+	}	
 }

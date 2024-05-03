@@ -1,4 +1,4 @@
-package Java_programming;
+package Java_programming_loop_array_String;
 
 import java.util.Scanner;
 
