@@ -8,17 +8,16 @@ public class Array_ravi
 	public static void main(String[] args) 
 	{
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter the size of Array: ");
-		int size = sc.nextInt();
-
-		int [] arr1 = new int [size];
-		
-		for(int i=0;i<size;i++)
-		{
-			System.out.println("Enter the value at "+i+" index  : ");
-			arr1[i] = sc.nextInt();
-		}
-		
+//		System.out.println("Enter the size of Array: ");
+//		int size = sc.nextInt();
+//
+//		int [] arr1 = new int [size];
+//		
+//		for(int i=0;i<size;i++)
+//		{
+//			System.out.println("Enter the value at "+i+" index  : ");
+//			arr1[i] = sc.nextInt();
+//		}
 //		System.out.println("---------------");	
 //		
 //		System.out.println("Enter the size of second array");
@@ -30,12 +29,52 @@ public class Array_ravi
 //			System.out.println("Enter the value at "+i+" index : ");
 //			arr2[i] = sc.nextInt();
 //		}
-		
 //		System.out.println("enter the element which needs to be searched");
 //		int n = sc.nextInt();
-				
-		missing(arr1);
+		
+		int a[] = {1,2,2,4,5,2,3} ; int b[] = {2,3};
+		System.out.println(Arrays.toString(arrayDiff(a,b)));
 		sc.close();
+	}
+	
+	// remove all the elements from 1st array which are existing in array 2 
+	public static int[] arrayDiff (int []a , int [] b)
+	{
+		int c =0 , n = 0 , tem=0 ;
+		int [] temp = new int [a.length];
+		for (int i=0 ;i<a.length ;i++) 
+		{
+			for (int j=0 ;j<b.length ;j++)
+			{
+				System.out.println("value of a[i]:" + a[i]);
+				if (a[i] == b[j])
+				{
+					System.out.println("equal condition" + a[i]);
+					c++ ;
+				}
+				else
+				{
+					n++ ;
+					System.out.println("value of n " +n);
+				}
+			}
+			if(n == b.length)
+			{
+				System.out.println("not equal array insert " + a[i]) ;
+				temp[tem] = a[i];
+				tem++ ;
+				n=0 ;
+			}
+			n=0;
+		}
+		int [] out = new int [a.length-c];
+		int i=0;
+		while(i<out.length)
+		{
+			out[i] = temp[i];
+			i++ ;
+		}
+		return out ;
 	}
 	
 	//WAP to display missing element in a given sorted array in a range
