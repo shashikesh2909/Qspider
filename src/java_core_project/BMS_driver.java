@@ -9,6 +9,7 @@ public class BMS_driver {
 		Movies m = (Movies) b1 ;
 		m.selectMovies();
 		m.selectSeat();
+		
 	}
 	
 

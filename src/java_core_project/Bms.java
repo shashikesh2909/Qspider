@@ -7,4 +7,5 @@ public interface Bms
 	String loc(BookMyShow b);
 	String selectOperation();
 	void fullBookings() ;
+	
 }

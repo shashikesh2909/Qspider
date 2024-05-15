@@ -298,14 +298,6 @@ public class Movies extends BookMyShow
 		double cgst = this.total * 0.025 ;
 		System.out.println("                              CGST  2.5% : " + cgst);
 		System.out.println("                              CGST  2.5% : " + cgst);
-
-
-		
-		
-
-
-
-
 		
 	}
 	

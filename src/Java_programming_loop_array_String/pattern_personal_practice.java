@@ -1,13 +1,12 @@
 package Java_programming_loop_array_String;
 
-public class pattern_personal_practice 
+public class pattern_personal_practice extends String_practice_ravi 
 {
 	
 	public static void main(String[] args) 
-	{
-//		pattern_practice();
-		arti();
-		
+	{		
+		a = 200 ;
+		System.out.println(a);
 	}
 	
 	public static void pattern_practice()

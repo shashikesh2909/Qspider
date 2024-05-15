@@ -5,10 +5,11 @@ import java.util.Scanner;
 
 public class String_practice_ravi 
 {
+	static int a = 595 ;
+	
 	public static void main(String[] args)
 	{
-		String s = "1 2 -3 4 -5" ;
-		System.out.println(highAndLow(s));
+		String_practice_ravi obj = new String_practice_ravi() ;
 	}
 	
 	public static String highAndLow(String num)
@@ -102,7 +103,6 @@ public class String_practice_ravi
        String s = new String(c) ;
        return  s.replace("$","");
     }
-	
 	
 	public static void practice_string_method()
 	{

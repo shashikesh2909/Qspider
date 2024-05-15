@@ -182,7 +182,5 @@ public class BookMyShow implements Bms
 			Comedy c = new Comedy() ;
 			this.l = loc(c);
 		}
-	}
-	
-	
+	}		
 }
