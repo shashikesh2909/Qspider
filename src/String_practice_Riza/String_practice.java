@@ -9,12 +9,23 @@ public class String_practice
 	{
 		System.out.println("Enter email");
 		String s = sc.nextLine();
-		email(s) ;
+		
 		System.out.println("Enter Password");
 		String p = sc.nextLine();
-		pwd(p);
+		if(s.endsWith(p))
+		{
+			System.out.println("Email and password cannot be same");
+		}
+		else
+		{
+			email(s) ;
+			pwd(p);
+		}
+		
 	}
+//	Q WAJP takes any input from the user as a password and that string must have minimum 8 characters and uppercase , a lower case , a symbol and a number.Also enter email id : It should end with .com , it should contain @ , it should not not have space , return the email id in lower case  , not start with @ , email and password cannot be same
 	
+
 	public static boolean splchar(String a)
 	{
 		char [] c = a.toCharArray();
@@ -31,35 +42,14 @@ public class String_practice
 		}
 	}
 	
-	public static boolean spchar(String a)
-	{
-		char [] c = a.toCharArray();
-		int splchar = 0 ;
-		for(int i=0 ;i<a.length();i++)
-		{
-			if ((c[i]>=33 && c[i]<=45) || (c[i]>=58 && c[i]<=64)||(c[i]>=91 && c[i]<=94)||(c[i]>=123 ) )
-			{
-				splchar++ ;
-			}
-		}
-		if(splchar >0)
-		{
-			return true ;
-		}
-		else
-		{
-			return false ;
-		}
-	}
-	
 	public static void email(String email)
 	{
 		char [] c = email.toCharArray();
 		
-		if(email.length()>3&&email.substring(email.length()-4).equalsIgnoreCase(".com") && 
+		if(email.length()>3 && email.substring(email.length()-4).equalsIgnoreCase(".com") && 
 				!email.substring(0,1).equals("@") && email.contains("@") && 
 				!email.contains(" ") && splchar(email) == false)
-		{
+			{
 			int c1 = 0 ,c2 = 0;
 			for(int i=0;i<email.length();i++)
 			{
@@ -83,7 +73,7 @@ public class String_practice
 					{
 						if (c[email.indexOf('@')+1] != '.' )
 						{
-							System.out.println("Vaild email id: " + email.toLowerCase());
+							System.out.println("Vaild email: " + email.toLowerCase());
 						}
 						else
 						{
@@ -96,7 +86,6 @@ public class String_practice
 						error();
 					}
 				}
-			
 			}
 			else{
 				error();
@@ -132,10 +121,6 @@ public class String_practice
 				{
 					lower++;
 				}
-				else if (c[i]>=0 && c[i]<=9)
-				{
-					num++;
-				}
 				else if (c[i]>=48 && c[i]<=57)
 				{
 					num++;
@@ -148,7 +133,7 @@ public class String_practice
 			}
 			if (upper >=1 && lower >=1 && splchar >=1 && num >= 1)
 			{
-				System.out.println("Valid password credential: " + pwd);
+				System.out.println("Valid password : " + pwd);
 			}
 			else
 			{
