@@ -1,7 +1,13 @@
 package collection;
 
-public class Employee implements Comparable<Employee>
+public class Employee
 {
+	int eid ;
+	String ename ;
+	double sal ;
+	int deptno ;
+	
+	/*
 	@Override
 	public int compareTo(Employee e) 
 	{
@@ -12,10 +18,10 @@ public class Employee implements Comparable<Employee>
 			return -1 ;
 		else 
 			return 0 ;
-	*/		
+		
 			//sort by ename
 		 return this.ename.compareTo(e.ename);
-	/*	
+		
 		// sort by salary
 		if(this.sal > e.sal)
 			return 1 ;
@@ -34,13 +40,8 @@ public class Employee implements Comparable<Employee>
 					return -1 ;
 				else 
 					return 0 ;
-	*/  
-	}
+	 */
 	
-	int eid ;
-	String ename ;
-	double sal ;
-	int deptno ;
 
 public Employee(int eid,String ename,double sal,int deptno)
 {
@@ -49,7 +50,5 @@ public Employee(int eid,String ename,double sal,int deptno)
 	this.sal = sal ;
 	this.deptno = deptno ;
 }
-
-
 
 }

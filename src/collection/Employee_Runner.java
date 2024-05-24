@@ -54,25 +54,12 @@ public class Employee_Runner  {
 			Employee e = l.previous();
 			System.out.println(e.eid +" " + e.ename + " " + e.sal + " " + e.deptno ) ;
 		}
-		Collections.sort(al);
+		Collections.sort(al,new EmployeeComparatorEidSort());
 		System.out.println("------------------");
 		for (Employee x : al)
 		{
 			System.out.println(x.eid +" " + x.ename + " " + x.sal + " " + x.deptno);
 		}
-		
-//		String[] s = new String [al.size()];
-//		for(int k =0;k<al.size();k++)
-//		{
-//			s[k] = al.get(k).ename ;
-//		}
-//		Arrays.sort(s);
-//		System.out.println(Arrays.toString(s));
-//		for(int k=0 ; k<al.size();k++)
-//		{
-//			Object o = al.get(s[i]);
-//			System.out.println(al.get(temp).eid +" " + al.get(temp).ename + " " + al.get(temp).sal + " " + al.get(temp).deptno );
-//		}
 	}
 	
 	
