@@ -15,9 +15,6 @@ public class LinkedListWorking {
 		System.out.println(l);
 		l.remove(3);
 		System.out.println(l);
-
-
-
 	}
 
 }
