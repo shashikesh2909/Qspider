@@ -1,6 +1,7 @@
 package collection;
 
 import java.util.Collection;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
@@ -10,6 +11,39 @@ import java.util.Set;
 public class MapsWorking {
 
 	public static void main(String[] args) 
+	{
+		
+		method1();
+	}
+	
+	public static void method1()
+	{
+		HashMap<Integer,String> hm = new HashMap();
+		hm.put(1,"My");
+		hm.put(2,"Name");
+		hm.put(3,"is");
+		hm.put(4,"Shashikesh");
+		
+		Collection<String> c = hm.values() ;
+		for(String x : c)
+		{
+			System.out.print(reverse(x) + " ");
+		}
+	}
+	
+	public static String reverse(String s)
+	{
+		char [] c = s.toCharArray();
+		char [] r = new char[s.length()];
+		for (int i=0;i<s.length();i++)
+		{
+			r[c.length-1-i] = c[i];
+		}
+		String rev = new String(r);
+		return rev ;
+	}
+	
+	public static void method()
 	{
 		HashMap<String,String> hm = new HashMap() ;
 		
@@ -64,7 +98,6 @@ public class MapsWorking {
 			System.out.println(s2.getKey() + " " + s2.getValue());
 			
 		}
-		
 	}
 
 }
